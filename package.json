@@ -1,0 +1,22 @@
+{
+  "name": "my-portfolio",
+  "version": "1.1.0",
+  "description": "This is a portfolio site made with scss, js and html.",
+  "main": "index.js",
+  "scripts": {
+    "start": "sass --watch scss/:dist/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/github.com/html-portfolio.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Zahid Khan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/github.com/html-portfolio/issues"
+  },
+  "homepage": "https://github.com/github.com/html-portfolio#readme"
+}
