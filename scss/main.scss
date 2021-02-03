@@ -1,0 +1,341 @@
+@import "config";
+@import "utils";
+@import "item_grid";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Dosis", sans-serif;
+  line-height: 1.6;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: $light-color;
+}
+
+ul {
+  list-style: none;
+}
+
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+}
+
+img {
+  width: 100%;
+}
+
+.logo img {
+  width: 180px;
+  height: 70px;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+
+  .nav-links {
+    display: flex;
+
+    li {
+      padding: 1rem 1.5rem;
+
+      a {
+        text-transform: uppercase;
+        border-bottom: 3px transparent solid;
+        padding-bottom: 0.5rem;
+        transition: border-color 0.5s;
+
+        &:hover {
+          border-color: $medium-color;
+        }
+
+        &.active {
+          border-color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+#header {
+  &-home {
+    background: $bg-image no-repeat center center/cover;
+    height: 100vh;
+    color: #fff;
+
+    .header-content {
+      text-align: center;
+      padding-top: 13%;
+
+      h1 {
+        font-size: 4rem;
+        line-height: 1.2;
+      }
+    }
+  }
+  &-inner {
+    background: $bg-image no-repeat 20% 30% / cover;
+    height: 5.5rem;
+    border-bottom: 3px solid $primary-color;
+  }
+}
+
+#main-content {
+  color: $dark-color;
+
+  #specialize {
+    .specialize {
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: 2rem;
+
+      .fas {
+        color: $primary-color;
+        padding-bottom: 0.4rem;
+      }
+    }
+  }
+
+  #stats {
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      div {
+        padding: 3rem 0;
+
+        &:nth-child(odd) {
+          background: $light-color;
+        }
+
+        &:nth-child(even) {
+          background: $medium-color;
+        }
+      }
+
+      ul {
+        li {
+          line-height: 2;
+
+          .stats-title {
+            font-size: 1.5rem;
+          }
+
+          .stats-number {
+            font-size: 2rem;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+  #process {
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1rem;
+      text-align: center;
+
+      &-icon {
+        position: relative;
+        background-color: $dark-color;
+        border-radius: 50%;
+        height: 7rem;
+        width: 7rem;
+        text-align: center;
+        padding-top: 1.5rem;
+        transition: all 1s;
+        color: #fff;
+
+        &:hover {
+          background-color: $primary-color;
+          width: 7.5rem;
+          height: 7.5rem;
+          padding-top: 1.8rem;
+
+          .process-num {
+            background-color: $dark-color;
+            transform: rotate(360deg);
+          }
+        }
+      }
+
+      &-num {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 20px;
+        background-color: $primary-color;
+        text-align: center;
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+        padding-top: 0.2rem;
+        transition: all 1s;
+        cursor: default;
+        color: #fff;
+      }
+    }
+  }
+
+  #about {
+    .about-me {
+      display: grid;
+      grid-template-areas:
+        "bio-img bio bio"
+        "award-1 award-2 award-3";
+      grid-gap: 1.2rem;
+    }
+    .bio-img {
+      grid-area: bio-img;
+      width: 80%;
+      border-radius: 50%;
+    }
+
+    .bio {
+      grid-area: bio;
+      border-left: 10px solid $primary-color;
+      padding: 0.8rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      border-radius: 0 3rem 3rem 0;
+
+      h4 {
+        color: $primary-color;
+        line-height: 1.6;
+      }
+
+      p {
+        line-height: 1.6;
+      }
+    }
+
+    .award-1 {
+      grid-area: award-1;
+    }
+    .award-2 {
+      grid-area: award-2;
+    }
+    .award-3 {
+      grid-area: award-3;
+    }
+
+    .award-1 .fas,
+    .award-2 .fas,
+    .award-3 .fas {
+      color: $primary-color;
+      margin: 1rem;
+    }
+
+    &-progress {
+      border-radius: 3rem 3rem 0 0;
+      padding: 1rem;
+
+      .progress {
+        overflow: hidden;
+        height: 20px;
+        background: $dark-color;
+        margin-bottom: 0.6rem;
+
+        div {
+          height: 100%;
+          color: #fff;
+          text-align: center;
+          background: $primary-color;
+        }
+      }
+    }
+
+    &-logo {
+      padding: 3rem;
+
+      .about-logos {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        align-items: center;
+
+        i {
+          color: $medium-color;
+          transition: all 500ms;
+
+          &:hover {
+            color: $dark-color;
+          }
+        }
+      }
+    }
+    &-test {
+      .testimonials {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1rem;
+
+        ul {
+          margin-top: 1rem;
+          display: flex;
+          align-items: center;
+        }
+
+        p {
+          border: 1px solid $medium-color;
+          border-radius: 15px;
+          padding: 0.5rem 1.5rem;
+        }
+
+        img {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+#main-footer {
+  background: $dark-color;
+  color: #fff;
+  height: 5rem;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+    align-items: center;
+
+    .social a {
+      .fab {
+        margin-right: 1rem;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        text-align: center;
+        padding: 0.5rem;
+        color: #fff;
+        transition: all 500ms;
+
+        &:hover {
+          background: $primary-color;
+          color: $dark-color;
+        }
+      }
+    }
+  }
+}
