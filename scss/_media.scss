@@ -104,6 +104,16 @@
     #specialize {
       .specialize {
         grid-template-columns: 1fr;
+
+        div {
+          border-bottom: 1px solid $light-color;
+          padding-bottom: 1rem;
+
+          &:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+          }
+        }
       }
     }
 

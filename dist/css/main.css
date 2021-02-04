@@ -604,6 +604,14 @@ img {
   #main-content #specialize .specialize {
     grid-template-columns: 1fr;
   }
+  #main-content #specialize .specialize div {
+    border-bottom: 1px solid #f4f4f4;
+    padding-bottom: 1rem;
+  }
+  #main-content #specialize .specialize div:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
   #main-content #process .process {
     grid-template-columns: repeat(2, 1fr);
   }
