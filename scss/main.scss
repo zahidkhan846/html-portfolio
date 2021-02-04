@@ -263,7 +263,7 @@ img {
     }
 
     &-logo {
-      padding: 3rem;
+      padding: 0 3rem;
 
       .about-logos {
         display: flex;
@@ -308,6 +308,84 @@ img {
       }
     }
   }
+
+  #contact {
+    &-a {
+      form {
+        padding: 2rem;
+        max-width: 800px;
+        margin: auto;
+
+        button {
+          margin-top: 1.2rem;
+          display: block;
+          width: 100%;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          font-size: 18px;
+          font-weight: bold;
+        }
+      }
+
+      .text-fields {
+        display: grid;
+        grid-template-areas:
+          "name email"
+          "subject phone"
+          "message message";
+        grid-gap: 1.2rem;
+
+        .text-input {
+          padding: 0.5rem 1rem;
+          font-size: 16px;
+          font: inherit;
+          outline: none;
+          border: 1px solid $medium-color;
+
+          &:focus {
+            outline: none;
+            border: 2px solid $primary-color;
+          }
+        }
+
+        .name-input {
+          grid-area: name;
+        }
+
+        .email-input {
+          grid-area: email;
+        }
+
+        .subject-input {
+          grid-area: subject;
+        }
+
+        .phone-input {
+          grid-area: phone;
+        }
+
+        .message-input {
+          grid-area: message;
+          height: 8rem;
+        }
+      }
+    }
+    &-b {
+      border-radius: 15px 15px 0 0;
+
+      .contact-info {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        text-align: center;
+      }
+    }
+    &-c {
+      h1 {
+        text-align: center;
+        font-size: 3rem;
+      }
+    }
+  }
 }
 
 #main-footer {
@@ -339,3 +417,5 @@ img {
     }
   }
 }
+
+@import "media";
