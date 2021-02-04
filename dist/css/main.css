@@ -409,7 +409,7 @@ img {
   background: #ffbc00;
 }
 #main-content #about-logo {
-  padding: 0 3rem;
+  padding: 3rem;
 }
 #main-content #about-logo .about-logos {
   display: flex;
